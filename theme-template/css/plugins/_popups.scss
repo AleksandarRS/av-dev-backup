@@ -1,0 +1,49 @@
+.schedule-popup {
+    background-color: $black; /* Fallback color */
+    bottom: 48px;
+    border-radius: 7px;
+    color: $white;
+    display: none;
+    left: -61px;
+    margin: auto;
+    padding: 36px 10px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: auto;
+    width: 234px;
+    z-index: 1;
+    &:after {
+        border-bottom: 12px solid transparent;
+        bottom: -24px;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 12px solid $black;
+        content: '';
+        display: block;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        width: 0px;
+    }
+  }
+  .schedule-popup-content {
+    .close {
+        color: $grey-0;
+        font-size: 1.4em;
+        position: absolute;
+        right: 5px;
+        top: -9px;
+        @include transition;
+      }
+      .close:hover,
+      .close:focus {
+        color: $white;
+        text-decoration: none;
+        cursor: pointer;
+      }
+  }
+  
+
+  

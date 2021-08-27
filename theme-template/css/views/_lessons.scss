@@ -1,0 +1,112 @@
+/* --------
+# CONFIG
+--------- */
+/* 1. RESET  */
+@import "../../../theme-template/css/config/reset";
+/* 2. VARIABLES */
+@import "../../../theme-template/css/config/common";
+@import "../../../theme-template/css/config/variables";
+
+/* -----------
+# ABSTRACT
+----------- */
+/* 1. MIXINS  */
+// @import "../../../theme-template/css/abstract/mixins";
+/* 2. FUNCTIONS */
+// @import "../../theme-template/css/abstract/functions";
+
+/* -----------
+# LAYOUTS
+----------- */
+/* 1. BASE  */
+@import "../../../theme-template/css/layout/base";
+/* 6. GRID  */
+@import "../../../theme-template/css/layout/grid";
+
+/* -----------
+# VIEWS
+----------- */
+.lessons-content-heading,
+.lessons-content-elements-item {
+    border-bottom: 1px solid $grey-1;
+    padding: 7px 5px;
+}
+.lessons-content-heading {
+    cursor: pointer;
+    .icon-arrow.icon-arrow-bottom {
+        transition: none;
+    }
+    &.arrow-switch {
+        .icon-arrow.icon-arrow-bottom {
+            border-bottom: 8px solid $grey-dark-4;
+            border-top: 8px solid transparent;
+            margin-top: -10px;
+        }
+    }
+}
+.lessons-content-elements {
+    .lessons-content-elements-item {
+        background-color: $white;
+        > div {
+            align-items: center;
+            display: flex;
+            > div {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+        .lessons-content-operational-icons-wrapper {
+            flex: 0 0 145px;
+            max-width: 145px;
+        }
+        .lessons-content-description {
+            flex: 0 0 663px;
+            max-width: 663px;
+        }
+        .lessons-content-instructial-icons-wrapper {
+            flex: 0 0 200px;
+            max-width: 200px;
+        }
+        .lessons-content-operational-icon-item {
+            cursor: pointer;
+        }
+        .disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            filter: grayscale(1);
+        }
+        .lessons-content-instructial-icon-item-button {
+            position: relative;
+        }
+
+    }
+    .lessons-content-description {
+        > div {
+            span {
+                background-image: url('../icons/lessons/arrow.png');
+                background-repeat: no-repeat;
+                background-position: center right;
+                position: relative;
+                display: inline-block;
+                margin-right: 10px;
+                padding-right: 20px;
+                vertical-align: middle;
+                &:last-of-type {
+                    background-image: none;
+                }
+                &:first-of-type {
+                    background-image: url('../icons/lessons/arrow.png');
+                }
+            }
+        }
+        .lessons-content-title-item {
+            span {
+                &:last-of-type {
+                    background-image: none;
+                }
+            }
+        }
+    }
+}
+
+

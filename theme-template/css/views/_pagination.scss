@@ -1,0 +1,107 @@
+/* --------
+# CONFIG
+--------- */
+/* 1. RESET  */
+@import "../../../theme-template/css/config/reset";
+/* 2. VARIABLES */
+@import "../../../theme-template/css/config/common";
+@import "../../../theme-template/css/config/variables";
+
+/* -----------
+# ABSTRACT
+----------- */
+/* 1. MIXINS  */
+// @import "../../../theme-template/css/abstract/mixins";
+/* 2. FUNCTIONS */
+// @import "../../theme-template/css/abstract/functions";
+
+/* -----------
+# LAYOUTS
+----------- */
+/* 1. BASE  */
+@import "../../../theme-template/css/layout/base";
+/* 6. GRID  */
+// @import "../../../theme-template/css/layout/grid";
+
+/* -----------
+# VIEWS
+----------- */
+.pagination-nav-links {
+    > a,
+    span {
+        margin: 0 5px;
+    }
+    .page-pagination-numbers,
+    .current-week {
+        border: 1px solid $grey-dark-4;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .current-week {
+        padding: 5px 12px;
+    }
+    .page-pagination-numbers {
+        color: $grey-dark-4;
+        border-radius: 3px;
+        min-width: 37px;
+        padding: 5px 8px;
+        text-align: center;
+        @include transition;
+        &.prev,
+        &.next {
+            border-color: transparent;
+        }
+        &.current {
+            &:hover {
+                background-color: transparent;
+                color: inherit;
+            }
+        }
+        &:hover {
+            background-color: $primary-color-hover;
+            color: $white;
+        }
+    }
+    .pagination-desc-item {
+        -webkit-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        transition: all 0.5s;
+        &:hover {
+            color: $primary-color;
+            .icon-arrow-right {
+                border-left-color: $primary-color;
+            }
+            .icon-arrow-left {
+                border-right-color: $primary-color;
+            }
+        }
+    }
+    
+}
+.icon-arrow {
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    display: inline-block;
+    padding: 0;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+    -webkit-transition: border-color 0.5s;
+    -ms-transition: border-color 0.5s;
+    transition: border-color 0.5s;
+    &.icon-arrow-right {
+        border-left: 8px solid $grey-dark-4;
+        margin-left: 4px;
+    }
+    &.icon-arrow-left {
+        border-right: 8px solid $grey-dark-4;
+        margin-right: 4px;
+    }
+    &.icon-arrow-bottom {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid $grey-dark-4;
+        margin-right: 4px;
+        margin-top: 7px;
+    }
+}

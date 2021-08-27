@@ -1,0 +1,67 @@
+/* --------
+# CONFIG
+--------- */
+/* 1. RESET  */
+@import "../../../theme-template/css/config/reset";
+/* 2. VARIABLES */
+@import "../../../theme-template/css/config/common";
+@import "../../../theme-template/css/config/variables";
+
+/* -----------
+# ABSTRACT
+----------- */
+/* 1. MIXINS  */
+// @import "../../../theme-template/css/abstract/mixins";
+/* 2. FUNCTIONS */
+// @import "../../theme-template/css/abstract/functions";
+
+/* -----------
+# LAYOUTS
+----------- */
+/* 1. BASE  */
+@import "../../../theme-template/css/layout/base";
+/* 6. GRID  */
+// @import "../../../theme-template/css/layout/grid";
+
+/* -----------
+# VIEWS
+----------- */
+.welcome-profile-details {
+    align-items: center;
+    color: $grey-dark-2;
+    display: flex;
+    > div {
+        align-items: center;
+        display: flex;
+        > div {
+            padding: 0 11px;
+        }
+    }
+    .user-profile-name {
+        p {
+            font-size: 1em;
+        }
+    }
+    .user-profile-icon {
+        position: relative;
+        a {
+            display: block;
+        }
+        .icon-notification-number {
+            background-color: $red-1;
+            border: 2px solid $white;
+            border-radius: 50%;
+            color: $white;
+            display: inline-block;
+            font-size: $font-size-xsmall;
+            padding: 2px;
+            position: absolute;
+            right: 1px;
+            height: 19px;
+            top: -8px;
+            text-align: center;
+            line-height: 1;
+            width: 19px;
+        }
+    }
+}

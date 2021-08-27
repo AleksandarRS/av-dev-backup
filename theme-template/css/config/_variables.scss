@@ -1,0 +1,158 @@
+/** 2.1 Typography */
+$font-family: var(--font-family);
+$font-family-secondary: var(--font-family-secondary);
+$font-size: var(--font-size);
+$font-size-small: var(--font-size-small);
+$font-size-xsmall: var(--font-size-xsmall);
+$font-weight: var(--font-weight);
+$line-height: var(--line-height);
+$letter-spacing: var(--letter-spacing);
+
+// Default Fonts
+$sans-serif: Helvetica, Arial, sans-serif;
+$serif: Georgia, serif;
+$cursive: cursive;
+
+// Context Typography
+$title-font-weight: 600;
+$text-font-size: 0.875em;
+$text-font-weight: $font-weight;
+$text-line-height: $line-height;
+$text-letter-spacing: $letter-spacing;
+$label-font-weight: 600;
+$lable-letter-spacing: 0.125em;
+// Element Typography
+$body-font-family: $font-family, $sans-serif;
+$body-font-size: $font-size;
+$body-font-weight: $font-weight;
+$body-line-height: $line-height;
+$body-letter-spacing: $letter-spacing;
+
+/** 2.2 Colors */
+$white: #ffffff;
+$black: #000;
+$grey-light-1: var(--grey-light-1);
+$grey-light-2: var(--grey-light-2);
+$grey-light-3: var(--grey-light-3);
+$grey-light-4: var(--grey-light-4);
+$grey-0: var(--grey-0);
+$grey-1: var(--grey-1);
+$grey-2: var(--grey-2);
+$grey-3: var(--grey-3);
+$grey-4: var(--grey-4);
+$grey-5: var(--grey-5);
+$grey-6: var(--grey-6);
+$grey-dark-1: var(--grey-dark-1);
+$grey-dark-2: var(--grey-dark-2);
+$grey-dark-3: var(--grey-dark-3);
+$grey-dark-4: var(--grey-dark-4);
+$grey-dark-5: var(--grey-dark-5);
+$grey-dark-6: var(--grey-dark-6);
+
+$alpha-light-1: var(--alpha-light-1);
+$alpha-light-2: var(--alpha-light-2);
+$alpha-light-3: var(--alpha-light-3);
+$alpha-dark-1: var(--alpha-dark-1);
+$alpha-dark-2: var(--alpha-dark-2);
+$alpha-green-1: var(--alpha-green-1);
+$alpha-green-2: var(--alpha-green-2);
+$alpha-green-3: var(--alpha-green-3);
+$alpha-red-1: var(--alpha-red-1);
+$alpha-red-2: var(--alpha-red-2);
+$alpha-red-3: var(--alpha-red-3);
+
+$alpha-lesson-1: var(--alpha-lesson-1);
+$alpha-test-1: var(--alpha-test-1);
+$alpha-quiz-1: var(--alpha-quiz-1);
+$alpha-project-1: var(--alpha-project-1);
+$alpha-field-trip-1: var(--alpha-field-trip-1);
+$alpha-lab-1: var(--alpha-lab-1);
+
+$green: var(--green);
+$green-hover: var(--green-hover);
+$green-light-1: var(--green-light-1);
+$green-light-2: var(--green-light-2);
+$yellow: var(--yellow);
+$orange: var(--orange);
+$orange-light-1: var(--orange-light-1);
+$red: var(--red);
+$red-1: var(--red-1);
+$purple: var(--purple);
+$purple-light-1: var(--purple-light-1);
+$blue: var(--blue);
+$blue-light-1: var(--blue-light-1);
+
+// Context Colors
+$primary-color: $green;
+$primary-color-hover: $green-hover;
+$success-color: $green;
+$error-color: $red;
+$title-color: $grey-dark-3;
+$text-color: $grey-3;
+$text-color-dark-bg: $grey-0;
+$link-color: $primary-color;
+$label-color: $grey-dark-2;
+$meta-color: $grey-1;
+$field-color: $grey-dark-3;
+$placeholder-color: $grey-1;
+$required-color: $primary-color;
+$checked-color: $primary-color;
+$online-color: $green;
+$offline-color: $red;
+$disabled-color: $grey-light-4;
+$away-color: $orange;
+$dark-background-color: $grey-dark-4;
+$light-background-color: $grey-light-1;
+$counter-background-color: $red;
+
+$lesson-color: $green;
+$test-color: $red;
+$quiz-color: $orange;
+$project-color: $purple;
+$field-trip-color: $blue;
+$lab-color: $yellow;
+
+$color-classes: (
+    primary: $primary-color,
+    success: $green,
+    error: $red,
+    activity: $grey-3,
+    lesson: $lesson-color,
+    test: $test-color,
+    quiz: $quiz-color,
+    project: $project-color,
+    field-trip: $field-trip-color,
+    lab: $lab-color,
+);
+
+// Property Colors
+$border-color: $grey-light-3;
+$box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+// Element Colors
+$body-color: $grey-dark-4;
+$body-background-color: $grey-light-1;
+$button-color: $text-color;
+$button-background-color: $white;
+
+/** 2.3 Layout */
+$grid-container: 1556px;
+$grid-gutter: 10;
+$grid-columns: 12;
+$grid-breakpoints: (
+    default: null,
+    xs: 442px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1600px
+);
+
+$box-sizing: border-box;
+// Brake points
+$xs: 442px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1600px;

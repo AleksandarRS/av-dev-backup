@@ -1,0 +1,161 @@
+// Animation
+@mixin transition($property: all, $duration: .3s, $ease: ease, $delay: 0s){
+	-webkit-transition: $property $duration $ease $delay;
+	-moz-transition: $property $duration $ease $delay;
+	-o-transition: $property $duration $ease $delay;
+	transition: $property $duration $ease $delay;
+}
+
+@mixin animation($prop) {
+	-webkit-animation: $prop;
+	animation: $prop;
+}
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+	  @content; 
+	}
+	@-moz-keyframes #{$name} {
+	  @content;
+	}
+	@-ms-keyframes #{$name} {
+	  @content;
+	}
+	@keyframes #{$name} {
+	  @content;
+	}
+}
+
+// Media Queries
+@mixin mediaQuery($size, $max:'min', $direction: 'width'){
+	@if($direction == 'width') {
+		@if $max == 'max' {
+			@media all and (max-width: $size) {
+				@content;
+			}
+		} @else if $max == 'min' {
+			@media all and (min-width: $size) {
+				@content;
+			}
+		}
+	} @else if($direction == 'height') {
+		@if $max == 'max' {
+			@media all and (max-height: $size) {
+				@content;
+			}
+		} @else if $max == 'min' {
+			@media all and (min-height: $size) {
+				@content;
+			}
+		}
+	}
+}
+
+// Gradients
+@mixin linearGradient($top, $bottom, $dir:'to bottom', $deg:'0'){
+	@if ($dir == 'to bottom') {
+		background: $top; // Old browsers
+		background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); // FF3.6+ 
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); // Chrome,Safari4+ 
+		background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); // Chrome10+,Safari5.1+ 
+		background: -o-linear-gradient(top,  $top 0%,$bottom 100%); // Opera 11.10+ 
+		background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); // IE10+ 
+		background: linear-gradient(to bottom,  $top 0%,$bottom 100%); // W3C 
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); // IE6-9 
+	} @else if ($dir == 'to right') {
+		background: $top; // Old browsers 
+		background: -moz-linear-gradient(right,  $top 0%, $bottom 100%); // FF3.6+ 
+		background: -webkit-gradient(linear, left right, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); // Chrome,Safari4+ 
+		background: -webkit-linear-gradient(right,  $top 0%,$bottom 100%); // Chrome10+,Safari5.1+ 
+		background: -o-linear-gradient(right,  $top 0%,$bottom 100%); // Opera 11.10+ 
+		background: -ms-linear-gradient(right,  $top 0%,$bottom 100%); // IE10+ 
+		background: linear-gradient(to right,  $top 0%,$bottom 100%); // W3C 
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); // IE6-9 
+	} @else if ($dir == 'custom') {
+		background: $top; // Old browsers
+		background: -moz-linear-gradient($deg,  $top 0%, $bottom 100%); // FF3.6+
+		background: -webkit-linear-gradient($deg,  $top 0%,$bottom 100%); // Chrome10+, Safari5.1+
+		background: -o-linear-gradient($deg,  $top 0%,$bottom 100%); // Opera 11.10+
+		background: -ms-linear-gradient($deg,  $top 0%,$bottom 100%); // IE10+
+		background: linear-gradient($deg,  $top 0%,$bottom 100%); // W3C
+	}
+}
+
+@mixin radial-gradient($from, $to, $default:0) {
+	// Old browsers 
+	@if ($default == 0) {
+		background:  $from;
+	} @else {
+		background: $default;
+	}
+
+	background: -moz-radial-gradient(center, ellipse cover, $from, $to); // FF3.6-15
+	background: -webkit-radial-gradient(center, ellipse cover, $from, $to); // Chrome10-25,Safari5.1-6
+	background: radial-gradient(ellipse at center, $from, $to); //W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{from}', endColorstr='#{to}',GradientType=1 ); //IE6-9 fallback on horizontal gradient
+}
+
+// Text
+@mixin font-smoothing($val: antialiased) {
+	-webkit-font-smoothing: $val;
+	-moz-font-smoothing: $val;
+	-ms-font-smoothing: $val;
+	-o-font-smoothing: $val;
+}
+
+@mixin text-overflow {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+@mixin user-select ($val: none)  {
+	-webkit-touch-callout: $val; // iOS Safari
+    -webkit-user-select: $val;   // Safari
+    -moz-user-select: $val;   	 // Old versions of Firefox
+    -ms-user-select: $val;   	 // Internet Explorer/Edge
+    user-select: $val;   	     // Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox
+}
+
+// Layout
+@mixin clearfix {
+	&::after {
+		display: table;
+		content: '';
+		clear: both;
+	}
+}
+
+@mixin center($direction: xy, $position: absolute) {
+	position: $position;
+	@if ($direction == 'y') {
+		top: 50%;
+		transform: translateY(-50%);
+	} @else if ($direction == 'x') {
+		left: 50%;
+		transform: translateX(-50%);
+	} @else {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+// Form
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&::-ms-input-placeholder {
+		@content;
+	}
+}

@@ -1,0 +1,55 @@
+@function grid-breakpoint-key($name) {
+    @return if($name == 'default', "", "-#{$name}");
+}
+
+.container {
+    display: block;
+    width: 100%;
+    max-width: $grid-container;
+    margin-left: auto;
+    margin-right: auto; 
+
+    &.gutter {
+        padding-left: rem($grid-gutter);
+        padding-right: rem($grid-gutter);
+
+        .row {
+            margin-left: rem(-$grid-gutter);
+            margin-right: rem(-$grid-gutter);
+    
+            > * {
+                padding: rem($grid-gutter);
+            }
+        }
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+
+    > * {
+        width: 100%;
+    }
+}
+
+.d-flex {
+    display: flex;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    $breakpoint-key: grid-breakpoint-key($breakpoint);
+
+    @for $i from 1 through $grid-columns {
+        .col#{$breakpoint-key}-#{$i} {
+            @if($breakpoint-key == '') {
+                width: percentage($i/$grid-columns);
+            } @else {
+                @include mediaQuery(map-get($grid-breakpoints, $breakpoint)){
+                    width: percentage($i/$grid-columns);
+                }
+            }
+        }
+    }
+}

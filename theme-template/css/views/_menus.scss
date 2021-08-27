@@ -1,0 +1,76 @@
+/* --------
+# CONFIG
+--------- */
+/* 1. RESET  */
+@import "../../../theme-template/css/config/reset";
+/* 2. VARIABLES */
+@import "../../../theme-template/css/config/common";
+@import "../../../theme-template/css/config/variables";
+
+/* -----------
+# ABSTRACT
+----------- */
+/* 1. MIXINS  */
+// @import "../../../theme-template/css/abstract/mixins";
+/* 2. FUNCTIONS */
+// @import "../../theme-template/css/abstract/functions";
+
+/* -----------
+# LAYOUTS
+----------- */
+/* 1. BASE  */
+@import "../../../theme-template/css/layout/base";
+/* 6. GRID  */
+// @import "../../../theme-template/css/layout/grid";
+
+/* -----------
+# VIEWS
+----------- */
+.classes-menu-wrapper,
+.main-menu-wrapper {
+    background-color: $grey-dark-4;
+    border-bottom: 1px solid $grey-dark-1;
+    color: $text-color-dark-bg;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    li {
+        a {
+            display: block;
+            padding: 5px 35px;
+            @include transition;
+            &:hover {
+                background-color: $alpha-light-2;
+            }
+        }
+        &.navigation-menu-item-active {
+            a {
+                background-color: $alpha-light-3;
+            }
+            svg {
+                path.hover-fill {
+                    fill: $grey-0;
+                }
+            }
+        }
+        svg,
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+        svg {
+            position: relative;
+            margin-right: 5px;
+        }
+    }
+}
+.classes-menu-wrapper {
+    > header {
+        font-family: $font-family-secondary;
+        color: $grey-0;
+        padding-left: 15px;
+        
+    }
+}

@@ -1,0 +1,7 @@
+@function rem($val) {
+    @return ($val / 16)+rem;
+}
+
+@function em($val, $base:16) {
+    @return ($val / $base)+em;
+}
