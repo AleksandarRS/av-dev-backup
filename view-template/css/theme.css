@@ -303,14 +303,16 @@ td {
   --grey-dark-4: #272727;
   --grey-dark-5: #1F1F1F;
   --grey-dark-6: #1C1C1C;
+  --grey-dark-7: #151B26;
   --green: #27BF81;
   --green-hover: #3ED195;
   --green-light-1: #C1ECA5;
   --green-light-2: #E9EF91;
-  --yellow: #E4CA39;
+  --yellow: #FFA500;
   --orange: #EB8D2A;
   --orange-light-1: #ECA5A5;
   --red: #E5283C;
+  --red-0: #FF5858;
   --red-1: #FF0000;
   --purple: #9138E6;
   --purple-light-1: #ACA5EC;
@@ -344,6 +346,7 @@ td {
   --font-size-small: 14px;
   --font-size-xsmall: 12px;
   --font-weight: 400;
+  --font-weight-light: 300;
   --line-height: 1.6;
   --letter-spacing: 0;
   --min-equal-pix: 1.15px;
@@ -445,6 +448,10 @@ svg.icon {
   margin: 0 20px;
 }
 
+.row-border-style {
+  border-bottom: 1px solid var(--grey-2);
+}
+
 /** 1.3 Float */
 .float-left {
   float: left;
@@ -469,8 +476,8 @@ svg.icon {
 
 .flex.flex--spaced {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .flex.flex--center {
@@ -490,6 +497,7 @@ svg.effect {
   display: none;
 }
 
+/**  */
 /* 6. GRID  */
 .container {
   display: block;
@@ -527,10 +535,18 @@ svg.effect {
   width: 100%;
 }
 
-.d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.custom-col-sidebar {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 12.6%;
+          flex: 0 0 12.6%;
+  max-width: 12.6%;
+}
+
+.custom-col-maincontent {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 87.4%;
+          flex: 0 0 87.4%;
+  max-width: 87.4%;
 }
 
 .col-1 {

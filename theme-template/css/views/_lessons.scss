@@ -29,10 +29,19 @@
 .lessons-content-heading,
 .lessons-content-elements-item {
     border-bottom: 1px solid $grey-1;
-    padding: 7px 5px;
+    padding-left: 0;
+    padding-right: 0;
 }
 .lessons-content-heading {
     cursor: pointer;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-top: 7px;
+    .lessons-content-title {
+        font-family: $font-family-secondary;
+        font-weight: $font-weight;
+        font-size: 1em;
+    }
     .icon-arrow.icon-arrow-bottom {
         transition: none;
     }
@@ -44,69 +53,98 @@
         }
     }
 }
+.lessons-content-section {
+    width: 100%;
+}
 .lessons-content-elements {
     .lessons-content-elements-item {
         background-color: $white;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        width: 100%;
+    }
+    .lessons-content-elements-item-inner {
+        width: 80%;
         > div {
             align-items: center;
             display: flex;
-            > div {
-                padding-left: 5px;
-                padding-right: 5px;
-            }
         }
         .lessons-content-operational-icons-wrapper {
-            flex: 0 0 145px;
-            max-width: 145px;
+            flex: 0 0 153px;
+            max-width: 153px;
+            > div {
+                padding-left: 7px;
+                padding-right: 7px;
+                &:last-of-type {
+                    padding-left: 0;
+                }
+            }
         }
         .lessons-content-description {
-            flex: 0 0 663px;
-            max-width: 663px;
+            flex: 0 0 50.8%;
+            max-width: 50.8%;
+            > div {
+                span {
+                    background-image: url("../icons/lessons/arrow.png");
+                    background-position: center right;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    margin-right: 5px;
+                    padding-right: 17px;
+                    position: relative;
+                    vertical-align: middle;
+                    &:last-of-type {
+                        background-image: none;
+                        margin-right: 0;
+                        padding-right: 10px;
+                    }
+                    &:first-of-type {
+                        background-image: url("../icons/lessons/arrow.png");
+                    }
+                    &.error-notification {
+                        background-image: none;
+                        margin-right: 0;
+                        margin-top: -2px;
+                        padding-right: 10px;
+                    }
+                }
+                &.lessons-content-month-item {
+                    padding-right: 15px;
+                    padding-left: 7px;
+                    white-space: nowrap;
+                    span {
+                        padding-right: 25px;
+                    }
+                }
+            }
+            .lessons-content-title-item {
+                span {
+                    &:last-of-type {
+                        background-image: none;
+                    }
+                }
+            }
         }
         .lessons-content-instructial-icons-wrapper {
             flex: 0 0 200px;
             max-width: 200px;
+            > div {
+                padding-left: 7px;
+                padding-right: 8px;
+            }
+            .lessons-content-instructial-icon-item-button {
+                position: relative;
+                padding-left: 11px;
+            }
         }
         .lessons-content-operational-icon-item {
             cursor: pointer;
         }
         .disabled {
-            opacity: 0.5;
             cursor: not-allowed;
             filter: grayscale(1);
+            opacity: 0.5;
         }
-        .lessons-content-instructial-icon-item-button {
-            position: relative;
-        }
-
-    }
-    .lessons-content-description {
-        > div {
-            span {
-                background-image: url('../icons/lessons/arrow.png');
-                background-repeat: no-repeat;
-                background-position: center right;
-                position: relative;
-                display: inline-block;
-                margin-right: 10px;
-                padding-right: 20px;
-                vertical-align: middle;
-                &:last-of-type {
-                    background-image: none;
-                }
-                &:first-of-type {
-                    background-image: url('../icons/lessons/arrow.png');
-                }
-            }
-        }
-        .lessons-content-title-item {
-            span {
-                &:last-of-type {
-                    background-image: none;
-                }
-            }
-        }
+        
     }
 }
-
-

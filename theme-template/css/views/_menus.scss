@@ -26,17 +26,32 @@
 /* -----------
 # VIEWS
 ----------- */
+.classes-menu-wrapper {
+    padding-bottom: 20px;
+    padding-top: 22px;
+}
+.main-menu-wrapper {
+    padding-bottom: 23px;
+    padding-top: 36px;
+    a {
+        letter-spacing: -0.3px;
+    }
+}
 .classes-menu-wrapper,
 .main-menu-wrapper {
     background-color: $grey-dark-4;
     border-bottom: 1px solid $grey-dark-1;
     color: $text-color-dark-bg;
-    padding-bottom: 15px;
-    padding-top: 15px;
+    &:last-of-type {
+        border-bottom: none;
+    }
+    ul {
+        list-style: none;
+    }
     li {
         a {
             display: block;
-            padding: 5px 35px;
+            padding: 3px 25px;
             @include transition;
             &:hover {
                 background-color: $alpha-light-2;
@@ -56,9 +71,14 @@
         span {
             display: inline-block;
             vertical-align: middle;
-            -webkit-transition: all 0.5s;
-            -ms-transition: all 0.5s;
-            transition: all 0.5s;
+            @include transition;
+        }
+        .menu-icon-wrap {
+            display: inline-block;
+            max-width: 25px;
+            text-align: center;
+            vertical-align: middle;
+            width: 100%;
         }
         svg {
             position: relative;
@@ -70,7 +90,60 @@
     > header {
         font-family: $font-family-secondary;
         color: $grey-0;
-        padding-left: 15px;
-        
+        .classes-menu-title {
+            font-weight: $font-weight-light;
+        }
     }
+    .classes-menu-title,
+    .classes-navigation-menu-item {
+        color: $grey-0;
+        font-size: 0.875em;
+    }
+    .classes-navigation-list {
+        padding-top: 8px;
+    }
+    .classes-navigation-menu-item {
+        font-weight: $font-weight;
+        position: relative;
+        &:after {
+            background-color: $primary-color;
+            border-radius: 2px;
+            content: '';
+            height: 10px;
+            left: 24px;
+            position: absolute;
+            top: 9px;
+            width: 10px;
+        }
+        &:first-child {
+            &:after {
+                background-color: $yellow;
+            }
+        }
+        &:nth-child(2) {
+            &:after {
+                background-color: $red-0;
+            }
+        }
+        a {
+            font-family: $font-family-secondary;
+            padding-left: 42px;       
+        }
+    }
+    .show-more-link {
+        font-family: $font-family-secondary;
+        font-weight: $font-weight-light;
+        a {
+            color: $grey-dark-2;
+            font-size: 0.686em;
+            @include transition-color;
+            &:hover {
+                color: $grey-0;
+            }
+        }    
+    }
+}
+.classes-menu-wrapper header,
+.show-more-link {
+    padding-left: 24px;
 }

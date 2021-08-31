@@ -65,38 +65,33 @@
 
 /* -----------
 # LAYOUTS
-/* 3. PLUGINS */
-@import "plugins/customscroll";
-@import "plugins/popups";
-@import "plugins/slidetoggle";
-
 /* 1. BASE  */
 @import "layout/base";
-/* 6. GRID  */
+/* 2. GRID  */
 @import "layout/grid";
+
+
 
 /* ------------
 # VIEWS
 ------------- */
 /* 1. BUTTONS  */
 @import "views/buttons";
-@import "views/menus";
-@import "views/pagination";
-@import "views/heading";
-@import "views/select-dropdown";
-@import "views/lessons";
+/* 2. CLASSES TABLES  */
 @import "views/classes-table";
-@import "views/profile-header";
+/* 3. HEADINGS  */
+@import "views/heading";
+/* 4. LAYOUT STRUCTURE  */
+@import "views/layout-structure";
+/* 5. LESSONS  */
+@import "views/lessons";
+/* 6. MENU  */
+@import "views/menus";
+/* 7. PAGINATION  */
+@import "views/pagination";
+/* 8. USER PROFILE HEADER  */
+@import "views/user-profile-header";
 
-/* 2. MENU  */
-
-/* 4. FORM  */
-
-/* 5. CARDS  */
-
-/* 6. GRAPHS  */
-
-/* 8. MEDIA  */
 
 /* 9. NAVIGATION  */
 
@@ -108,6 +103,13 @@
 
 /* 13. MISC */
 
+
 /* ---------
 # PLUGINS
 ---------- */
+/* 1. POPUPS  */
+@import "plugins/popups";
+/* 2. SELECT  */
+@import "plugins/select-dropdown";
+/* 3. TOGGLE  */
+@import "plugins/slidetoggle";

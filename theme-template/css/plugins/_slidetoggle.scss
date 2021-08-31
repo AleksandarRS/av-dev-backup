@@ -1,8 +1,13 @@
-#mdiv {
+#toggle-element {
   height: auto;
   width: 100%;
-  overflow-y: hidden;
-  // &.overflow-rule {
-    
-  // }
+  overflow: hidden;
+}
+
+.toggle-container {
+  @include transition-height;
+  overflow: hidden;
+}
+.toggle-container:not(.active) {
+  display: none;
 }

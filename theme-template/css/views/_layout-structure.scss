@@ -1,0 +1,62 @@
+/* --------
+# CONFIG
+--------- */
+/* 1. RESET  */
+@import "../../../theme-template/css/config/reset";
+/* 2. VARIABLES */
+@import "../../../theme-template/css/config/common";
+@import "../../../theme-template/css/config/variables";
+
+/* -----------
+# ABSTRACT
+----------- */
+/* 1. MIXINS  */
+// @import "../../../theme-template/css/abstract/mixins";
+/* 2. FUNCTIONS */
+// @import "../../theme-template/css/abstract/functions";
+
+/* -----------
+# LAYOUTS
+----------- */
+/* 1. BASE  */
+@import "../../../theme-template/css/layout/base";
+/* 6. GRID  */
+// @import "../../../theme-template/css/layout/grid";
+
+/* -----------
+# VIEWS
+----------- */
+.sidebar-layout-element {
+    background-color: $grey-dark-4;
+    padding: 15px 0;
+    min-width: 239px;
+}
+.site-branding-main-logo {
+    padding: 0 25px;
+    a {
+        svg {
+            circle {
+                @include transition;
+            }
+        }
+        &:hover {
+            svg {
+                circle {
+                    fill: $white;
+                }
+            }
+        }
+    }
+}
+.content-area {
+    > section {
+        padding-left: 25px;
+        padding-right: 25px;
+        width: 100%;
+    }
+}
+section {
+    > div {
+        width: 100%;
+    }
+}

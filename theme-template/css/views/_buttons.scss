@@ -27,15 +27,16 @@
 # VIEWS
 ----------- */
 .button {
-    padding: 4px 23px;
+    border-radius: 3px;
     border: 1px solid;
+    padding: 5px 12px;
+    font-size: 0.875em;
     @include transition;
     &.button-primary {
-        font-family: $font-family-secondary;
         background-color: $primary-color;
         border-color: $primary-color;
         color: $white;
-        font-size: $font-size-small;
+        font-family: $font-family-secondary;
         &:hover {
             background-color: $primary-color-hover;
 
@@ -52,14 +53,28 @@
             .hover-fill {
                 fill: $white;
             }
+            #attachment-icon {
+                opacity: 0.8;
+            }
         }
         &.button-secondary-popup {
-            padding: 3px 30px;
+            background-color: $white;
+            line-height: 1.5;
+            padding: 1px 35px;
             &:hover {
                 border-color: $grey-dark-4;
                 background-color: $grey-6;
                 color: $grey-dark-4;
             }
+        }
+        #attachment-icon {
+            opacity: 0.3;
+            @include transition;
+        }
+    }
+    > svg {
+        &:nth-child(2) {
+            margin: 0 7px;
         }
     }
     > svg,
@@ -68,8 +83,15 @@
         vertical-align: middle;
     }
     path {
-        -webkit-transition: fill 0.5s;
-        -ms-transition: fill 0.5s;
-        transition: fill 0.5s;
+        @include transition-fill;
+    }
+}
+.buttons-wrapper {
+    padding: 0 12px;
+    .button {
+        margin: 0 8px;
+    }
+    .button-secondary {
+        margin: 0 14px;
     }
 }

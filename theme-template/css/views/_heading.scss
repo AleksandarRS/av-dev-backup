@@ -29,20 +29,37 @@
 .main-heading {
     display: flex;
     h1, h2, h3 {
-        margin-top: 0;
+        color: $grey-dark-7;
+        font-size: 1.25em;
         line-height: 1;
+        margin-top: 0;
     }
     time {
-        color: $grey-dark-1;
+        color: $grey-dark-2;
+        font-size: 0.815em;
     }
     .title-date-wrapp {
         padding-left: 10px;
+        padding-top: 4px;
     }
     .heading-icon {
+        padding-top: 6px;
         svg {
-            font-size: 50px;
-            height: 50px;
-            width: 50px;
+            display: block;
+            font-size: 40px;
+            height: 40px;
+            width: 40px;
         }
+    }
+    .page-date {
+        margin-left: -1px;
+        margin-top: -3px;
+    }
+}
+.main-header-content-details {
+    border-bottom: 1px solid $grey-2;
+    padding: 9px 15px 7px;
+    .main-heading {
+        padding-left: 16px;
     }
 }

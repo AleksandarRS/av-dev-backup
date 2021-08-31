@@ -6,6 +6,33 @@
 	transition: $property $duration $ease $delay;
 }
 
+@mixin transition-color($property: color, $duration: .3s, $ease: ease, $delay: 0s){
+	-webkit-transition: $property $duration $ease $delay;
+	-moz-transition: $property $duration $ease $delay;
+	-o-transition: $property $duration $ease $delay;
+	transition: $property $duration $ease $delay;
+}
+
+@mixin transition-height($property: height, $duration: .4s, $ease: ease-in-out, $delay: 0s){
+	-webkit-transition: $property $duration $ease $delay;
+	-moz-transition: $property $duration $ease $delay;
+	-o-transition: $property $duration $ease $delay;
+	transition: $property $duration $ease $delay;
+}
+
+@mixin transition-bgcolor($property: background-color, $duration: .3s, $ease: ease, $delay: 0s){
+	-webkit-transition: $property $duration $ease $delay;
+	-moz-transition: $property $duration $ease $delay;
+	-o-transition: $property $duration $ease $delay;
+	transition: $property $duration $ease $delay;
+}
+@mixin transition-fill($property: fill, $duration: .3s, $ease: ease, $delay: 0s){
+	-webkit-transition: $property $duration $ease $delay;
+	-moz-transition: $property $duration $ease $delay;
+	-o-transition: $property $duration $ease $delay;
+	transition: $property $duration $ease $delay;
+}
+
 @mixin animation($prop) {
 	-webkit-animation: $prop;
 	animation: $prop;

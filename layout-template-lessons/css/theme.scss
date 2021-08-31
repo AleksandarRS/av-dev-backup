@@ -1,0 +1,51 @@
+/* --------
+# CONFIG
+--------- */
+/* 1. RESET  */
+@import "../../theme-template/css/config/reset";
+/* 2. VARIABLES */
+@import "../../theme-template/css/config/common";
+@import "../../theme-template/css/config/variables";
+
+/* -----------
+# ABSTRACT
+----------- */
+/* 1. MIXINS  */
+@import "../../theme-template/css/abstract/mixins";
+/* 2. FUNCTIONS */
+@import "../../theme-template/css/abstract/functions";
+
+/* -----------
+# LAYOUTS
+----------- */
+/* 1. BASE  */
+@import "../../theme-template/css/layout/base";
+/* 6. GRID  */
+@import "../../theme-template/css/layout/grid";
+
+/* -----------
+# VIEWS
+----------- */
+@import "../../theme-template/css/views/layout-structure";
+@import "../../theme-template/css/views/heading";
+@import "../../theme-template/css/views/user-profile-header";
+@import "../../theme-template/css/views/pagination";
+@import "../../theme-template/css/views/buttons";
+
+@import "../../theme-template/css/views/lessons";
+@import "../../theme-template/css/views/classes-table";
+@import "../../theme-template/css/views/menus";
+
+/* -----------
+# TEMPLATE VIEWS
+----------- */
+@import "layout/view-template-general";
+
+/* -----------
+# PLUGINS
+----------- */
+/* 1. SELECT  */
+@import "../../theme-template/css/plugins/select-dropdown";
+@import "../../theme-template/css/plugins/popups";
+@import "../../theme-template/css/plugins/slidetoggle";
+

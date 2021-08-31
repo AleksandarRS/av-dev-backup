@@ -34,8 +34,13 @@
     }
 }
 
-.d-flex {
-    display: flex;
+.custom-col-sidebar {
+    flex: 0 0 12.6%;
+    max-width: 12.6%;
+}
+.custom-col-maincontent {
+    flex: 0 0 87.4%;
+    max-width: 87.4%;
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
