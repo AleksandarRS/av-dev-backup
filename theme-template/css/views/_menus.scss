@@ -36,6 +36,12 @@
     a {
         letter-spacing: -0.3px;
     }
+    .navigation-menu-item {
+        font-family: $font-family-secondary;
+        @include mediaQuery($ls) {
+            font-size: 0.9365em;
+        }
+    }
 }
 .classes-menu-wrapper,
 .main-menu-wrapper {
@@ -53,6 +59,10 @@
             display: block;
             padding: 3px 25px;
             @include transition;
+
+            @include mediaQuery($xl) {
+                padding: 3px 15px;
+            }
             &:hover {
                 background-color: $alpha-light-2;
             }
@@ -83,6 +93,7 @@
         svg {
             position: relative;
             margin-right: 5px;
+            top: -1px;
         }
     }
 }
@@ -101,6 +112,18 @@
     }
     .classes-navigation-list {
         padding-top: 8px;
+        > .classes-navigation-menu-item {
+            &:first-child {
+                &:after {
+                    background-color: $yellow;
+                }
+            }
+            &:nth-child(2) {
+                &:after {
+                    background-color: $red-0;
+                }
+            }
+        }
     }
     .classes-navigation-menu-item {
         font-weight: $font-weight;
@@ -114,22 +137,20 @@
             position: absolute;
             top: 9px;
             width: 10px;
-        }
-        &:first-child {
-            &:after {
-                background-color: $yellow;
+            @include mediaQuery($xl) {
+                left: 15px;
             }
         }
-        &:nth-child(2) {
-            &:after {
-                background-color: $red-0;
-            }
-        }
+        
         a {
             font-family: $font-family-secondary;
-            padding-left: 42px;       
+            padding-left: 42px;
+            @include mediaQuery($xl) {
+                padding-left: 33px;
+            }
         }
     }
+    
     .show-more-link {
         font-family: $font-family-secondary;
         font-weight: $font-weight-light;
@@ -146,4 +167,7 @@
 .classes-menu-wrapper header,
 .show-more-link {
     padding-left: 24px;
+    @include mediaQuery($xl) {
+        padding-left: 15px;
+    }
 }

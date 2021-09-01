@@ -29,7 +29,6 @@
 .sidebar-layout-element {
     background-color: $grey-dark-4;
     padding: 15px 0;
-    min-width: 239px;
 }
 .site-branding-main-logo {
     padding: 0 25px;
@@ -53,6 +52,10 @@
         padding-left: 25px;
         padding-right: 25px;
         width: 100%;
+        @include mediaQuery($ls) {
+            padding-left: 13px;
+            padding-right: 13px;
+        }
     }
 }
 section {

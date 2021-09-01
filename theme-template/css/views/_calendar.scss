@@ -1,0 +1,43 @@
+/* --------
+# CONFIG
+--------- */
+/* 1. RESET  */
+@import "../../../theme-template/css/config/reset";
+/* 2. VARIABLES */
+@import "../../../theme-template/css/config/common";
+@import "../../../theme-template/css/config/variables";
+
+/* -----------
+# ABSTRACT
+----------- */
+/* 1. MIXINS  */
+// @import "../../../theme-template/css/abstract/mixins";
+/* 2. FUNCTIONS */
+// @import "../../theme-template/css/abstract/functions";
+
+/* -----------
+# LAYOUTS
+----------- */
+/* 1. BASE  */
+@import "../../../theme-template/css/layout/base";
+/* 6. GRID  */
+// @import "../../../theme-template/css/layout/grid";
+
+/* -----------
+# VIEWS
+----------- */
+.callendar-wrapper {
+    border: 1px solid rgba($color: $grey-dark-2, $alpha: 0.33);
+    .calendar-heading {
+        align-items: center;
+        background-color: $grey-light-5;
+        border: 1px solid $grey-5;
+        display: flex;
+        font-size: 1.15em;
+        justify-content: space-between;
+        > div {
+            align-items: center;
+            display: flex;
+        }
+    }
+}

@@ -3,7 +3,6 @@
   width: 100%;
   overflow: hidden;
 }
-
 .toggle-container {
   @include transition-height;
   overflow: hidden;
@@ -11,3 +10,10 @@
 .toggle-container:not(.active) {
   display: none;
 }
+
+// .lessons-content-elements {
+//   display: none;
+// }
+// .lessons-content-elements:not(.active) {
+//   display: block;
+// }

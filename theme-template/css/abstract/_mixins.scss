@@ -33,6 +33,13 @@
 	transition: $property $duration $ease $delay;
 }
 
+@mixin transition-lg($property: all, $duration: .5s, $ease: ease, $delay: 0s){
+	-webkit-transition: $property $duration $ease $delay;
+	-moz-transition: $property $duration $ease $delay;
+	-o-transition: $property $duration $ease $delay;
+	transition: $property $duration $ease $delay;
+}
+
 @mixin animation($prop) {
 	-webkit-animation: $prop;
 	animation: $prop;
@@ -54,7 +61,7 @@
 }
 
 // Media Queries
-@mixin mediaQuery($size, $max:'min', $direction: 'width'){
+@mixin mediaQuery($size, $max:'max', $direction: 'width'){
 	@if($direction == 'width') {
 		@if $max == 'max' {
 			@media all and (max-width: $size) {
@@ -75,6 +82,12 @@
 				@content;
 			}
 		}
+	}
+}
+
+@mixin min-mq($var) {
+	@media (min-width: #{$var}) {
+	  @content;
 	}
 }
 

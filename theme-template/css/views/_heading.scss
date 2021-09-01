@@ -33,6 +33,10 @@
         font-size: 1.25em;
         line-height: 1;
         margin-top: 0;
+        @include mediaQuery ($xxs) {
+            font-size: 1.05em;
+        }
+        
     }
     time {
         color: $grey-dark-2;
@@ -49,6 +53,11 @@
             font-size: 40px;
             height: 40px;
             width: 40px;
+            @include mediaQuery ($xxs) {
+                font-size: 30px;
+                height: 30px;
+                width: 30px;
+            }
         }
     }
     .page-date {
@@ -61,5 +70,8 @@
     padding: 9px 15px 7px;
     .main-heading {
         padding-left: 16px;
+        @include mediaQuery ($lg) {
+            padding-left: 0;
+        }
     }
 }

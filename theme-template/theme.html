@@ -18,18 +18,32 @@
         <![endif]-->
 
         <!-- HTML elements -->
-
+        
+        <hr/>
         <!-- HTML h tag elements -->
-        <h1>h1</h1>
-        <h2>h2</h2>
-        <h3>h3</h3>
-        <h4>h4</h4>
-        <h5>h5</h5>
-        <h6>h6</h6>
+        <header>
+            <h1>h1</h1>
+        </header>
+        <header>
+            <h2>h2</h2>
+        </header>
+        <header>
+            <h3>h3</h3>
+        </header>
+        <header>
+            <h4>h4</h4>
+        </header>
+        <header>
+            <h5>h5</h5>
+        </header>
+        <header>
+            <h6>h6</h6>
+        </header>
 
         <hr/>
         <!-- HTML label tag elements -->
         <label>label</label>
+
 
         <hr/>
         <!-- HTML a tag elements -->
@@ -66,6 +80,7 @@
             <button class="button button-primary"><img src="icons/button/graphic-icon.svg" alt="Graphic icon"> Graphical grade Book</button>
         </div> <!-- /.buttons-wrapper -->
 
+
         <hr/>
         <!-- HTML navigation elements -->
         <div class="main-menu-wrapper">
@@ -98,6 +113,7 @@
                 </ul>
             </nav> <!-- /#site-navigation /.main-navigation -->
         </div> <!-- /.main-menu-wrapper -->
+
 
         <hr/>
         <!-- HTML sub navigation elements -->
@@ -148,6 +164,7 @@
             </nav> <!-- /#classes-navigation /.classes-navigation -->
         </div> <!-- /.classes-menu-wrapper -->
 
+
         <hr/>
         <!-- HTML Pagination elements -->
         <div class="pagination-nav-links">
@@ -158,6 +175,7 @@
             <a class="page-pagination-numbers" href="">50</a>
             <a class="next pagination-desc-item" href="">Next <span class="icon-arrow icon-arrow-right"></span></a>	
         </div> <!-- /.pagination-nav-links -->
+
 
         <hr/>
         <!-- HTML Heading elements -->
@@ -174,6 +192,7 @@
                 </div> <!-- /.title-date-wrapp -->
             </div> <!-- /.title-date-wrapp -->
         </header> <!-- /.main-heading -->
+
 
         <hr/>
         <!-- HTML Welcome elements -->
@@ -202,16 +221,18 @@
             </div> <!-- /.profile-information-wrap -->
         </div> <!--/.welcome-profile-details -->
 
+
         <hr/>
         <!-- HTML Select dropdown elements -->
-        <div class="custom-select classes-select-dropdown">
+        <div class="custom-select classes-select-dropdown border-style">
             <select id="classes-select" name="classes">
                 <option value="geometry-101">Geometry 101</option>
                 <option value="language-arts">Language Arts</option>
                 <option value="geometry-101-1">Geometry 101 1</option>
                 <option value="language-arts-1">Language Arts 1</option>
-            </select> <!-- /#classes -->
+            </select> <!-- /#classes-select -->
         </div> <!-- /.custom-select classes-select-dropdown -->
+
 
         <hr/>
         <!-- HTML Lessons elements -->
@@ -363,7 +384,7 @@
                                     <div class="lessons-content-month-item">
                                         <p><span>April 10</span></p>
                                     </div> <!-- /.lessons-content-month-item -->
-                                    <div class="lessons-content-title-item">
+                                    <div class="lessons-content-title-item has-error-notification">
                                         <p>
                                             <span class="error-notification"><img src="icons/lessons/notification-icon.png" alt="Error notification icon"></span>
                                             <span>Test - Pythagorean Theorem (Decimals, Radicals, Word Problems, Classification)</span>
@@ -494,8 +515,8 @@
                                     <div class="lessons-content-instructial-icon-item lessons-content-instructial-icon-item-button">
                                         <span class="lessons-content-instructial-button">
                                             <button id="myBtn" class="button button-link button-secondary button-secondary-popup">Test</button>
-                                            <div id="myModal" class="schedule-popup">
-                                                <div class="schedule-popup-content">
+                                            <div id="myModal" class="schedule-popup button-popup-tooltip">
+                                                <div class="schedule-popup-content button-popup-tooltip-content">
                                                     <span class="close">&times;</span>
                                                     <p>Test locked until</p>
                                                     <p>Friday, April 17th @ 10:30 am</p>
@@ -520,6 +541,7 @@
                 </div> <!-- /.lessons-content-inner -->
             </div> <!-- /.lessons-content-wrapper -->
         </div> <!-- /.lessons-content-section -->
+
 
         <hr/>
         <!-- HTML Classes table elements -->
@@ -985,7 +1007,14 @@
 
         <hr/>
         <!-- HTML Dashboard layout structure elements -->
-        <div id="page" class="layout-sidebar-main-content-wrapper hfeed flex justify-content-between">
+        <div id="page" class="layout-sidebar-main-content-wrapper hfeed flex">
+            <div class="menu-toggle-wrapper">
+                <span class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div> <!--/.menu-toggle-wrapper -->
             <div class="sidebar-layout-element custom-col-sidebar"> <!-- col-md-3 -->
                 <div class="site-branding-main-logo site-branding">
                     <a href="">
@@ -1008,10 +1037,74 @@
 
                 </div> <!-- /#primary /.content-area -->
             </main> <!-- /#main-content /.site-main -->
-        </div> <!-- /#page /.layout-sidebar-main-content-wrapper hfeed flex justify-content-between -->
+        </div> <!-- /#page /.layout-sidebar-main-content-wrapper hfeed flex -->
 
-        
+        <hr/>
+        <!-- HTML Calendar elements -->
+        <div class="callendar-wrapper">
+
+            <div class="calendar-heading">
+                <div class="calendar-heading-pagination-select-wrap">
+                    <ul class="calendar-pagination simple-pagination">
+                        <li class="pagination-item"><a href=""><span class="icon-arrow icon-arrow-left"></span></a></li>
+                        <li class="pagination-item"><a href=""><span class="icon-arrow icon-arrow-right"></span></a></li>
+                    </ul> <!-- /.calendar-pagination simple-pagination -->
+                    <div class="custom-select classes-select-dropdown no-border-style">
+                        <select id="classes-select" name="classes">
+                            <option value="may-18-22-2020">May 18 - 22, 2020</option>
+                            <option value="may-18-22-2020">May 18 - 22, 2020</option>
+                            <option value="may-22-26-2020">May 22 - 26, 2020</option>
+                            <option value="may-16-30-2020">May 26 - 30, 2020</option>
+                        </select> <!-- /#classes-select -->
+                    </div> <!-- /.custom-select classes-select-dropdown -->
+                </div> <!-- /.calendar-heading-pagination-select-wrap -->
+                <div class="calendar-heading-organizer">
+                    <div class="calendar-day-indicator">
+                        <p>Today</p>
+                    </div>
+                    <ul class="calendar-display-layout-list flex flex--center">
+                        <li><a href="">Day</a></li>
+                        <li><a href="">Week</a></li>
+                        <li><a href="">Work Week</a></li>
+                    </ul>
+                </div> <!-- /.calendar-heading-organizer -->
+            </div> <!-- /.calendar-heading -->
+
+            <div class="calendar-body">
+                <div class="top-fixed-calendar-details">
+                    <div class="hours-cell">
+
+                    </div>
+                    <div class="date-event-cell">
+                        <p>Mon</p>
+                        <p>18</p>
+                    </div>
+                    <div class="date-event-cell">
+                        <p>Tue</p>
+                        <p>19</p>
+                    </div>
+                    <div class="date-event-cell">
+                        <p>Wed</p>
+                        <p>20</p>
+                    </div>
+                    <div class="date-event-cell">
+                        <p>Thu</p>
+                        <p>21</p>
+                    </div>
+                    <div class="date-event-cell">
+                        <p>Fri</p>
+                        <p>22</p>
+                    </div>
+                </div> <!-- /.top-fixed-calendar-details -->
+                <div class="main-calendar-details">
+
+                </div> <!-- /.main-calendar-details -->
+            </div><!-- /.calendar-body -->
+
+        </div> <!-- /.callendar-wrapper -->
+
         <!-- <script src="./js/plugins/customscroll.js" async defer></script> -->
+        <script src="./js/modules/menu-toggle.js" async defer></script>
         <script src="./js/modules/slidetoggle.js" async defer></script>
         <script src="./js/plugins/popups.js" async defer></script>
         <script src="./js/plugins/select.js" async defer></script>

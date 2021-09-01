@@ -30,16 +30,39 @@
     align-items: center;
     color: $grey-dark-2;
     display: flex;
+    @include mediaQuery ($lg) {
+        margin-right: 65px;
+    }
+    @include mediaQuery ($xs) {
+        margin-right: 48px;
+    }
+    
     > div {
         align-items: center;
         display: flex;
         > div {
             margin: 0 0 0 25px;
+            @include mediaQuery ($md) {
+                margin-left: 15px;
+            }
+            &.user-account-icon {
+                @include mediaQuery ($sm) {
+                    margin-left: 0;
+                }
+            }
         }
     }
     .user-profile-name {
+        @include mediaQuery ($sm) {
+            display: none;
+        }
         p {
             font-size: 1em;
+        }
+    }
+    .profile-information-wrap {
+        @include mediaQuery ($xxxs) {
+            display: none;
         }
     }
     .user-profile-icon {

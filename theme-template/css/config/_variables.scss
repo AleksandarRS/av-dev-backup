@@ -36,6 +36,7 @@ $grey-light-1: var(--grey-light-1);
 $grey-light-2: var(--grey-light-2);
 $grey-light-3: var(--grey-light-3);
 $grey-light-4: var(--grey-light-4);
+$grey-light-5: var(--grey-light-5);
 $grey-0: var(--grey-0);
 $grey-1: var(--grey-1);
 $grey-2: var(--grey-2);
@@ -143,19 +144,44 @@ $grid-gutter: 10;
 $grid-columns: 12;
 $grid-breakpoints: (
     default: null,
+    xxxs: 350px,
+    xxs: 410px,
     xs: 442px,
     sm: 576px,
     md: 768px,
+    tab: 860px,
     lg: 992px,
-    xl: 1200px,
-    xxl: 1600px
+    ipad: 1150px,
+    ls: 1300px,
+    xl: 1366px,
+    xxl: 1600px,
+    xxxl: 1800px
 );
+
 
 $box-sizing: border-box;
 // Brake points
+$xxxs: 350px;
+$xxs: 410px;
 $xs: 442px;
 $sm: 576px;
 $md: 768px;
+$tab: 860px;
 $lg: 992px;
-$xl: 1200px;
+$ipad: 1150px;
+$ls: 1300px;
+$xl: 1366px;
 $xxl: 1600px;
+$xxxl: 1800px;
+
+// Navigation config
+$responsive-toggle-breakpoint:      $lg;
+$toggle-menu-height:                20px;
+$toggle-menu-width:                 25px;
+$toggle-menu-bar-height:            3px;
+$toggle-menu-bar-color:             $primary-color;
+$toggle-menu-bar-active-color:      transparent;
+
+// @include mediaQuery($responsive-toggle-breakpoint) {
+//     display: none;
+// }

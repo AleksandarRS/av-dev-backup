@@ -31,6 +31,9 @@
     border-bottom: 1px solid $grey-1;
     padding-left: 0;
     padding-right: 0;
+    @include mediaQuery($md - 10) {
+        border-bottom: 1px solid $grey-4;
+    }
 }
 .lessons-content-heading {
     cursor: pointer;
@@ -64,26 +67,72 @@
         width: 100%;
     }
     .lessons-content-elements-item-inner {
-        width: 80%;
+        @include mediaQuery($md - 10) {
+            display: block;
+        }
         > div {
             align-items: center;
             display: flex;
+            @include mediaQuery($md - 10) {
+                border-bottom: 1px solid $grey-light-2;
+                padding-bottom: 5px;
+                padding-top: 5px;
+                &:last-child {
+                    border: none;
+                }
+            }
         }
         .lessons-content-operational-icons-wrapper {
             flex: 0 0 153px;
             max-width: 153px;
+            @include mediaQuery($ipad) {
+                flex: 0 0 132px;
+                max-width: 132px;
+            }
+            @include mediaQuery($md - 10) {
+                flex: 0 0 100%;
+                max-width: 100%;
+                width: 100%;
+            }
             > div {
                 padding-left: 7px;
                 padding-right: 7px;
+                @include mediaQuery($ipad) {
+                    padding-left: 4px;
+                    padding-right: 4px;
+                }
                 &:last-of-type {
                     padding-left: 0;
                 }
             }
         }
         .lessons-content-description {
-            flex: 0 0 50.8%;
-            max-width: 50.8%;
+            flex: 0 0 40.6%;
+            max-width: 40.6%;
+            @include mediaQuery($xxxl) {
+                flex: 0 0 65%;
+                max-width: 65%;
+            }
+            @include mediaQuery($xl) {
+                flex: 0 0 60%;
+                max-width: 60%;
+            }
+            @include mediaQuery($lg + 80) {
+                flex: 0 0 55%;
+                max-width: 55%;
+            }
+            @include mediaQuery($md - 10) {
+                flex: 0 0 100%;
+                max-width: 100%;
+                width: 100%;
+            }
             > div {
+                &.has-error-notification {
+                    > p {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
                 span {
                     background-image: url("../icons/lessons/arrow.png");
                     background-position: center right;
@@ -93,6 +142,9 @@
                     padding-right: 17px;
                     position: relative;
                     vertical-align: middle;
+                    @include mediaQuery ($sm) {
+                        display: inline;
+                    }
                     &:last-of-type {
                         background-image: none;
                         margin-right: 0;
@@ -112,8 +164,15 @@
                     padding-right: 15px;
                     padding-left: 7px;
                     white-space: nowrap;
+                    @include mediaQuery($ipad) {
+                        padding-right: 10px;
+                        padding-left: 4px;
+                    }
                     span {
                         padding-right: 25px;
+                        @include mediaQuery($ipad) {
+                            padding-right: 15px;
+                        }
                     }
                 }
             }
@@ -126,24 +185,53 @@
             }
         }
         .lessons-content-instructial-icons-wrapper {
-            flex: 0 0 200px;
-            max-width: 200px;
+            flex: 0 0 230px;
+            max-width: 230px;
+            @include mediaQuery($ipad) {
+                flex: 0 0 190px;
+                max-width: 190px;
+            }
+            @include mediaQuery($md - 10) {
+                flex: 0 0 100%;
+                max-width: 100%;
+                width: 100%;
+            }
             > div {
                 padding-left: 7px;
                 padding-right: 8px;
+                @include mediaQuery($ipad) {
+                    padding-right: 4px;
+                    padding-left: 4px;
+                }
             }
             .lessons-content-instructial-icon-item-button {
                 position: relative;
                 padding-left: 11px;
+                @include mediaQuery($ipad) {
+                    padding-left: 9px;
+                }
+                @include mediaQuery($md - 10) {
+                    padding-left: 5px;
+                    padding-bottom: 2px;
+                    padding-top: 4px;
+                  }
             }
         }
-        .lessons-content-operational-icon-item {
+        .lessons-content-operational-icon-item:not(.disabled) {
             cursor: pointer;
+            img {
+                @include transition;
+                &:hover {
+                    filter: grayscale(1);
+                    opacity: 0.5;
+                }
+            }
+
         }
         .disabled {
             cursor: not-allowed;
             filter: grayscale(1);
-            opacity: 0.5;
+            opacity: 0.3;
         }
         
     }

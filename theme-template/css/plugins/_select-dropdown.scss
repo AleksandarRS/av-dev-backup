@@ -28,6 +28,9 @@
 ----------- */
 .classes-select-dropdown {
   margin-left: 7px;
+  @include mediaQuery ($sm) {
+    margin-left: 0;
+  }
 }
 .custom-select {
   position: relative;
@@ -37,9 +40,16 @@
   select {
     display: none;
   }
+  &.border-style {
+    .select-selected {
+      border: 1px solid $grey-dark-4;
+      border-radius: 3px;
+    }
+    .select-items {
+      border: 1px solid $grey-dark-4;
+    }
+  }
   .select-selected {
-    border: 1px solid $grey-dark-4;
-    border-radius: 3px;
     color: $grey-dark-4;
     cursor: pointer;
     padding: 2px 8px;
@@ -72,9 +82,8 @@
     }
   }
   .select-items {
-    border: 1px solid $grey-dark-4;
-    position: absolute;
     left: 0;
+    position: absolute;
     right: 0;
     top: 100%;
     z-index: 99;

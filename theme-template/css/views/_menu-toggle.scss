@@ -1,0 +1,81 @@
+.menu-toggle-wrapper {
+    align-items: center;
+    background-color: $white;
+    border-radius: 3px;
+    display: flex;
+    padding: 7px;
+    position: fixed;
+    right: 18px;
+    top: 14px;
+    z-index: 99;
+    @include min-mq($responsive-toggle-breakpoint + 1) {
+        display: none;
+    }
+    @include mediaQuery ($xs) {
+        right: 10px;
+    }
+    .menu-toggle {
+        cursor: pointer;
+        display: inline-block;
+        height: $toggle-menu-height;
+        position: relative;
+        width: $toggle-menu-width;
+        .menu-opened & {
+            background-color: $toggle-menu-bar-active-color;
+            height: $toggle-menu-width;
+            width: $toggle-menu-width;
+        }
+        span {
+            background-color: $toggle-menu-bar-color;
+            display: block;
+            height: $toggle-menu-bar-height;
+            position: absolute;
+            transition: 0.4s;
+            width: 100%;
+            .menu-opened & {
+                left: 0;
+                right: 0;
+                top: 50%;
+                transform-origin: 50%;
+            }
+            &:nth-child(1) {
+                top: 0;
+                .menu-opened & {
+                    top: 45%;
+                    transform: rotate(-45deg);
+                }
+            }
+            &:nth-child(2) {
+                top: calc(50% - #{$toggle-menu-bar-height} / 2);
+                .menu-opened & {
+                    opacity: 0;
+                }
+            }
+            &:nth-child(3) {
+                top: calc(100% - #{$toggle-menu-bar-height});
+                .menu-opened & {
+                    top: 45%;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}
+
+.sidebar-layout-element {
+    @include mediaQuery($responsive-toggle-breakpoint) {
+        position: fixed;
+        height: 100%;
+        transform: translateX(-360px);
+        @include transition-lg;
+        flex: 0 0 240px;
+        max-width: 240px;
+        width: 240px;
+        z-index: 9;
+    }
+    .menu-opened & {
+        @include mediaQuery($responsive-toggle-breakpoint) {
+            transform: translateX(0);
+        }
+    }
+}

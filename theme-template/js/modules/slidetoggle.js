@@ -26,7 +26,7 @@ function slideToggle() {
 			mdiv.style.height = h + 'px';
 			if(h <= 0)
 				window.clearInterval(intval);
-			}, 0.001
+			}, 0.01
 		);
     }
     else {
@@ -37,7 +37,7 @@ function slideToggle() {
 			mdiv.style.height = h + 'px';
 			if(h >= initHeight)
 				window.clearInterval(intval);
-			}, 0.001
+			}, 0.01
 		);
     }
 }
@@ -65,7 +65,6 @@ for(i = 0; i < linkToggle.length; i++){
       container.style.height = '0px';
 
       setTimeout(function () {
-        // linkToggle.innerHTML = "Swapped text!";
         container.style.height = height;
       }, 0);
       
@@ -74,7 +73,6 @@ for(i = 0; i < linkToggle.length; i++){
       container.style.height = '0px';
       
       container.addEventListener('transitionend', function () {
-        // linkToggle.innerHTML = "Show more";
         container.classList.remove('active');
       }, {
         once: true
